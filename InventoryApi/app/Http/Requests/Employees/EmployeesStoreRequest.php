@@ -11,7 +11,7 @@ class EmployeesStoreRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,14 @@ class EmployeesStoreRequest extends FormRequest
     public function rules(): array
     {
         return [
-            
+            'name' => "required|string|unique:employees,name|max:255",
+            'salary' => "required|string",
+            'email' => "required|string|unique:employees,email|max:255",
+            'phone' => "required|string|unique:employees,phone",
+            'address' => "required|string|max:255",
+            'image' => 'required|image|mimes:jpeg,jpg,png,svg|max:2048',
+            'joiningDate' => 'required|date',
+            'nid' => 'required|string',
         ];
     }
 }

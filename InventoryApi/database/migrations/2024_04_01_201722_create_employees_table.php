@@ -18,9 +18,9 @@ return new class extends Migration
             $table->string('phone');
             $table->string('salary');
             $table->string('address');
-            $table->string('photo')->nullable();
+            $table->string('image')->nullable();
             $table->string('nid')->nullable();
-            $table->string('joining_date');
+            $table->string('joiningDate');
             $table->timestamps();
         });
     }

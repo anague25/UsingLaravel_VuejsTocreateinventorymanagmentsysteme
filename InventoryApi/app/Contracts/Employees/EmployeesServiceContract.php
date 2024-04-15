@@ -4,7 +4,7 @@ namespace App\Contracts\Employees;
 
 use App\Models\Employee;
 
-interface EmployeesServiceContract 
+interface EmployeesServiceContract
 {
 
     /**
@@ -13,7 +13,7 @@ interface EmployeesServiceContract
     public function create(array $data);
 
 
-     /**
+    /**
      * @param Employee $employee
      */
     public function show(Employee $employee);
@@ -32,7 +32,4 @@ interface EmployeesServiceContract
      * @param Employee $employee
      */
     public function delete(Employee $employee);
-
-
 }
-
